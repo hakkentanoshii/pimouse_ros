@@ -27,8 +27,8 @@ class MotorTest(unittest.TestCase):
     def test_put_freq(self):
         pub = rospy.Publisher('/motor_raw', MotorFreqs)
         m = MotorFreqs()
-        m.left_hz = 123 
-        m.right_hz = 456 
+        m.left_hz = 123
+        m.right_hz = 45
         for i in range(10):
             pub.publish(m)
             time.sleep(0.1)
